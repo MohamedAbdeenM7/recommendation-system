@@ -15,14 +15,14 @@
 ---
 
 ## 📁 Project Structure
-recommendation-system/
-├── data/          # Raw and processed data
-├── notebooks/     # Colab notebooks per student
-├── src/           # Source code
-├── tests/         # Unit tests
-├── deployment/    # Docker & Azure configs
-├── configs/       # Model & Azure settings
-└── docs/          # Reports & documentation
+### recommendation-system/
+- ├── data/          # Raw and processed data
+- ├── notebooks/     # Colab notebooks per student
+- ├── src/           # Source code
+- ├── tests/         # Unit tests
+- ├── deployment/    # Docker & Azure configs
+- ├── configs/       # Model & Azure settings
+- └── docs/          # Reports & documentation
 
 ---
 
