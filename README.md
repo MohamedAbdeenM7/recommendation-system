@@ -4,13 +4,13 @@
 ---
 
 ## 👥 Team
-| Student | Role | Milestone |
-|---------|------|-----------|
-| Student 1 | Data Engineer | M1 - Data & EDA |
-| Student 2 | ML Engineer | M2 - Models |
-| Student 3 | Backend Dev | M3 - API & Azure |
-| Student 4 | MLOps Engineer | M4 - Monitoring |
-| Student 5 | PM & Tech Writer | M5 - Docs |
+- | Student | Role | Milestone |
+- |---------|------|-----------|
+- | Mohamed Abdeen Mostafa | Data Engineer | M1 - Data & EDA |
+- | Student 2 | ML Engineer | M2 - Models |
+- | Student 3 | Backend Dev | M3 - API & Azure |
+- | Student 4 | MLOps Engineer | M4 - Monitoring |
+- | Student 5 | PM & Tech Writer | M5 - Docs |
 
 ---
 
@@ -27,9 +27,10 @@
 ---
 
 ## 🚀 How to Run
-!git clone https://github.com/MohamedAbdeenM7/recommendation-system.git
-%cd recommendation-system
-!pip install -r requirements.txt
+
+- !git clone https://github.com/MohamedAbdeenM7/recommendation-system.git
+- %cd recommendation-system
+- !pip install -r requirements.txt
 
 ---
 
