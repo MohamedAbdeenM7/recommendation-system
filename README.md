@@ -1,15 +1,27 @@
-# Personalized Recommendation System with Feedback Loop
+# الخطوة 6: عمل README.md الرئيس
+# 🛒 Personalized Recommendation System
+## Amazon Electronics Dataset
 
-## 📌 Project Overview
+---
 
-- This project is a scalable personalized recommendation engine designed for e-commerce or content platforms.
-- It provides tailored product/content suggestions to users and continuously
-- improves through real-time user feedback.
+## 👥 Team
+| Student | Role | Milestone |
+|---------|------|-----------|
+| Student 1 | Data Engineer | M1 - Data & EDA |
+| Student 2 | ML Engineer | M2 - Models |
+| Student 3 | Backend Dev | M3 - API & Azure |
+| Student 4 | MLOps Engineer | M4 - Monitoring |
+| Student 5 | PM & Tech Writer | M5 - Docs |
 
-## 🎯 Key Features
+---
 
-- Personalized Recommendations – Suggests items based on user behavior and preferences
-- Real-Time Feedback Loop – Adapts recommendations based on user interactions (clicks, purchases, ratings)
-- Scalable Cloud Deployment – Hosted on Azure with containerized services
-- MLOps Integration – Automated monitoring, retraining, and versioning
-- Interactive Dashboard – Visualizes recommendations, user engagement, and system performance
+## 📁 Project Structure
+
+recommendation-system/
+├── data/ # Raw and processed data
+├── notebooks/ # Colab notebooks per student
+├── src/ # Source code
+├── tests/ # Unit tests
+├── deployment/ # Docker & Azure configs
+├── configs/ # Model & Azure settings
+└── docs/ # Reports & documentation
