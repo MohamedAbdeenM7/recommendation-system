@@ -6,13 +6,13 @@
 
 ## 👥 Team
 
-- | Student | Name | Role | Milestone |
-- |---------|------|------|-----------|
-- | Student 1 | Mohamed Abdeen Mostafa | Data Engineer | M1 - Data & EDA |
-- | Student 2 | | ML Engineer | M2 - Models |
-- | Student 3 | | Backend Dev | M3 - API & Azure |
-- | Student 4 | | MLOps Engineer | M4 - Monitoring |
-- | Student 5 | | PM & Tech Writer | M5 - Docs |
+- | Student   |          Name          |       Role       |    Milestone     |
+- |---------  |------------------------|------------------|------------------|
+- | Student 1 | Mohamed Abdeen Mostafa | Data Engineer    | M1 - Data & EDA  |
+- | Student 2 |                        | ML Engineer      | M2 - Models      |
+- | Student 3 |                        | Backend Dev      | M3 - API & Azure |
+- | Student 4 |                        | MLOps Engineer   | M4 - Monitoring  |
+- | Student 5 |                        | PM & Tech Writer | M5 - Docs        |
 
 ---
 
@@ -53,10 +53,10 @@ pip install -r requirements.txt
 
 ## 📌 Milestones
 
-- | Milestone | Description | Status |
-- |-----------|-------------|--------|
-- | M1 | Data Collection, Preprocessing and EDA | ✅ Done |
-- | M2 | Model Development and Evaluation | ⏳ Pending |
-- | M3 | Cloud Deployment and Integration | ⏳ Pending |
-- | M4 | MLOps and Monitoring | ⏳ Pending |
-- | M5 | Final Documentation and Presentation | ⏳ Pending |
+- | Milestone |              Description               |    Status   |
+- |-----------|----------------------------------------|-------------|
+- |     M1    | Data Collection, Preprocessing and EDA | ✅ Done    |
+- |     M2    | Model Development and Evaluation       | ⏳ Pending |
+- |     M3    | Cloud Deployment and Integration       | ⏳ Pending |
+- |     M4    | MLOps and Monitoring                   | ⏳ Pending |
+- |     M5    | Final Documentation and Presentation   | ⏳ Pending |
