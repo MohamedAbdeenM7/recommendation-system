@@ -1,0 +1,76 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.3.6 Chrome/140.0.7339.249 Electron/38.8.0 Safari/537.36" version="29.3.6">
+  <diagram name="Page-1" id="70DEJr07gdPQKsh_HP_h">
+    <mxGraphModel dx="2143" dy="1489" grid="0" gridSize="10" guides="1" tooltips="0" connect="0" arrows="0" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" parent="1" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#ffffff;" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;🛒 Recommendation System — Project Structure&lt;/font&gt;" vertex="1">
+          <mxGeometry height="40" width="1200" x="600" y="-200" as="geometry" />
+        </mxCell>
+        <mxCell id="22" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a2e;strokeColor=#f0a500;fontSize=12;fontColor=#f0a500;fontStyle=1;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;📦 Amazon Electronics&lt;br&gt;Ratings Only&lt;br&gt;user_id, product_id&lt;br&gt;rating, date&lt;/font&gt;" vertex="1">
+          <mxGeometry height="100" width="250" x="57" y="-160" as="geometry" />
+        </mxCell>
+        <mxCell id="23" edge="1" parent="1" source="22" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#f0a500;" target="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1b4332;strokeColor=#52b788;fontSize=13;fontStyle=1;fontColor=#52b788;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;M1 — Data and EDA&lt;br&gt;Student 1 ✅&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="250" x="227" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0a1f0a;strokeColor=#52b788;fontSize=11;fontColor=#b7e4c7;align=left;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;span style=&quot;color: rgb(82, 183, 136);&quot;&gt;📄 Files &amp;amp; Functions&lt;/span&gt;&lt;br&gt;&lt;br&gt;ingest.py&lt;br&gt;  → load_ratings(path) — Loads CSV from Drive&lt;br&gt;  → validate_data(df) — Checks columns and types&lt;br&gt;  📦 Input: Electronics.csv&lt;br&gt;  📤 Output: Clean DataFrame&lt;br&gt;&lt;br&gt;preprocess.py&lt;br&gt;  → remove_duplicates(df)&lt;br&gt;  → filter_ratings(df)&lt;br&gt;  → filter_active_users(df, min=5)&lt;br&gt;  → filter_popular_products(df, min=5)&lt;br&gt;  → preprocess(df) — Full pipeline&lt;br&gt;  📦 Input: Raw DataFrame&lt;br&gt;  📤 Output: ratings_clean.csv&lt;br&gt;&lt;br&gt;test_preprocess.py&lt;br&gt;  → Unit tests for all preprocess functions&lt;br&gt;&lt;br&gt;M1_EDA_Report.md&lt;br&gt;  → Rating distribution analysis&lt;br&gt;  → Sparsity analysis&lt;br&gt;  → User and product activity&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(82, 183, 136);&quot;&gt;🛠️ Tools&lt;/span&gt;&lt;br&gt;pandas | numpy | matplotlib | seaborn&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(82, 183, 136);&quot;&gt;💼 Business Impact&lt;/span&gt;&lt;br&gt;Clean data = better recommendations&lt;br&gt;Bad data leads to poor model performance&lt;br&gt;This step ensures data quality and reliability&lt;br&gt;&lt;br&gt;📊 Total: 5 files | Status: ✅ Done&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="700" width="350" x="177" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="5" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#52b788;" target="101">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6" edge="1" parent="1" source="3" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#52b788;" target="7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a1a3e;strokeColor=#4895ef;fontSize=13;fontStyle=1;fontColor=#4895ef;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;M2 — Model Development&lt;br&gt;Student 2 ⏳&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="250" x="637" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="103" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#060d1a;strokeColor=#4895ef;fontSize=11;fontColor=#90e0ef;align=left;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b style=&quot;color:#4895ef&quot;&gt;📄 Files &amp;amp; Functions&lt;/b&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;collaborative.py&lt;/b&gt;&lt;br&gt;  → build_user_item_matrix(df)&lt;br&gt;  → compute_similarity(matrix)&lt;br&gt;  → get_recommendations(user_id, k)&lt;br&gt;  📦 Input: ratings_clean.csv&lt;br&gt;  📤 Output: Top-K recommendations&lt;br&gt;&lt;br&gt;&lt;b&gt;content_based.py&lt;/b&gt;&lt;br&gt;  → build_item_profile(metadata)&lt;br&gt;  → compute_cosine_similarity(profiles)&lt;br&gt;  → recommend_similar_items(item_id, k)&lt;br&gt;  📦 Input: Item metadata&lt;br&gt;  📤 Output: Similar items list&lt;br&gt;&lt;br&gt;&lt;b&gt;matrix_factorization.py&lt;/b&gt;&lt;br&gt;  → train_svd(matrix, n_factors)&lt;br&gt;  → predict_rating(user_id, item_id)&lt;br&gt;  📦 Input: User-item matrix&lt;br&gt;  📤 Output: Predicted ratings&lt;br&gt;&lt;br&gt;&lt;b&gt;train.py&lt;/b&gt;&lt;br&gt;  → Main script to train all models&lt;br&gt;  → Saves best model as .pkl file&lt;br&gt;&lt;br&gt;&lt;b&gt;M2_Model_Evaluation.md&lt;/b&gt;&lt;br&gt;  → Precision@K, Recall@K, NDCG, MAP&lt;br&gt;&lt;br&gt;&lt;b style=&quot;color:#4895ef&quot;&gt;🛠️ Tools&lt;/b&gt;&lt;br&gt;scikit-learn | scipy | surprise | numpy&lt;br&gt;&lt;br&gt;&lt;b style=&quot;color:#4895ef&quot;&gt;💼 Business Impact&lt;/b&gt;&lt;br&gt;Better models = higher click-through rates&lt;br&gt;Directly impacts user engagement&lt;br&gt;and product discovery on the platform&lt;br&gt;&lt;br&gt;📊 Total: 5 files | Status: ⏳ Pending&lt;/font&gt;" vertex="1">
+          <mxGeometry height="705" width="350" x="587" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="9" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#4895ef;" target="103">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="10" edge="1" parent="1" source="7" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#4895ef;" target="11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3d1a00;strokeColor=#f4a261;fontSize=13;fontStyle=1;fontColor=#f4a261;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;M3 — API and Deployment&lt;br&gt;Student 3 ⏳&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="250" x="1037" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="105" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a0a00;strokeColor=#f4a261;fontSize=11;fontColor=#ffd5a8;align=left;" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;b&gt;&lt;span style=&quot;color:#f4a261&quot;&gt;📄 Files &amp;amp; Functions&lt;/span&gt;&lt;br&gt;&lt;br&gt;main.py&lt;br&gt;  → FastAPI app entry point&lt;br&gt;  → Loads trained model on startup&lt;br&gt;  → /health endpoint for monitoring&lt;br&gt;  📦 Input: Trained .pkl model&lt;br&gt;  📤 Output: Running API server&lt;br&gt;&lt;br&gt;routes.py&lt;br&gt;  → POST /recommend — Get recommendations&lt;br&gt;  → GET /item/{id} — Get item details&lt;br&gt;  → POST /feedback — Submit user feedback&lt;br&gt;  📦 Input: user_id, k (top-K)&lt;br&gt;  📤 Output: JSON list of recommendations&lt;br&gt;&lt;br&gt;schemas.py&lt;br&gt;  → RecommendRequest(user_id, k)&lt;br&gt;  → RecommendResponse(items, scores)&lt;br&gt;  → FeedbackRequest(user_id, item_id, rating)&lt;br&gt;&lt;br&gt;Dockerfile&lt;br&gt;  → Containerizes the FastAPI app&lt;br&gt;  → Base image: python:3.10-slim&lt;br&gt;&lt;br&gt;deploy.yml&lt;br&gt;  → Azure ML managed endpoint config&lt;br&gt;  → Auto-scaling and monitoring setup&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#f4a261&quot;&gt;🛠️ Tools&lt;/span&gt;&lt;br&gt;FastAPI | uvicorn | Docker | Azure ML&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#f4a261&quot;&gt;💼 Business Impact&lt;/span&gt;&lt;br&gt;Makes the model accessible in real-time&lt;br&gt;Scalable API handles millions of requests&lt;br&gt;Enables live personalization for users&lt;br&gt;&lt;br&gt;📊 Total: 5 files | Status: ⏳ Pending&lt;/b&gt;&lt;/font&gt;" vertex="1">
+          <mxGeometry height="705" width="350" x="987" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="13" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#f4a261;" target="105">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="14" edge="1" parent="1" source="11" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#f4a261;" target="15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#2d003e;strokeColor=#c77dff;fontSize=13;fontStyle=1;fontColor=#c77dff;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;M4 — MLOps and Monitoring&lt;br&gt;Student 4 ⏳&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="270" x="1427" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="107" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#0d0014;strokeColor=#c77dff;fontSize=11;fontColor=#e0aaff;align=left;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color:#c77dff&quot;&gt;📄 Files &amp;amp; Functions&lt;/span&gt;&lt;br&gt;&lt;br&gt;tracking.py&lt;br&gt;  → log_experiment(model, metrics, params)&lt;br&gt;  → compare_runs(experiment_id)&lt;br&gt;  📦 Input: Model metrics and params&lt;br&gt;  📤 Output: MLflow experiment logs&lt;br&gt;&lt;br&gt;monitor.py&lt;br&gt;  → monitor_recommendations(logs)&lt;br&gt;  → detect_drift(old_data, new_data)&lt;br&gt;  → send_alert(metric, threshold)&lt;br&gt;  📦 Input: Real-time API logs&lt;br&gt;  📤 Output: Quality metrics dashboard&lt;br&gt;&lt;br&gt;retrain.py&lt;br&gt;  → check_retrain_trigger(metrics)&lt;br&gt;  → run_retraining_pipeline()&lt;br&gt;  → deploy_new_model(model)&lt;br&gt;  📦 Input: Usage trends and metrics&lt;br&gt;  📤 Output: Updated deployed model&lt;br&gt;&lt;br&gt;model_config.yaml&lt;br&gt;  → Hyperparameters for all models&lt;br&gt;  → Retraining schedule config&lt;br&gt;&lt;br&gt;M4_MLOps_Setup.md&lt;br&gt;  → Full MLOps documentation&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#c77dff&quot;&gt;🛠️ Tools&lt;/span&gt;&lt;br&gt;MLflow | Azure ML | GitHub Actions&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color:#c77dff&quot;&gt;💼 Business Impact&lt;/span&gt;&lt;br&gt;Keeps model accurate over time&lt;br&gt;Detects performance degradation early&lt;br&gt;Automates retraining without manual work&lt;br&gt;&lt;br&gt;📊 Total: 5 files | Status: ⏳ Pending&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="705" width="350" x="1387" y="185" as="geometry" />
+        </mxCell>
+        <mxCell id="17" edge="1" parent="1" source="15" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#c77dff;" target="107">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="18" edge="1" parent="1" source="15" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#c77dff;" target="19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="19" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#3d0000;strokeColor=#ef233c;fontSize=13;fontStyle=1;fontColor=#ef233c;" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;M5 — Documentation&lt;br&gt;Student 5 ⏳&lt;/font&gt;" vertex="1">
+          <mxGeometry height="70" width="250" x="1837" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="109" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#1a0000;strokeColor=#ef233c;fontSize=11;fontColor=#ffb3b3;align=left;" value="&lt;b&gt;&lt;font style=&quot;font-size: 14px;&quot;&gt;&lt;span style=&quot;color: rgb(239, 35, 60);&quot;&gt;📄 Files &amp;amp; Content&lt;/span&gt;&lt;br&gt;&lt;br&gt;Final Report&lt;br&gt;  → Methods and results summary&lt;br&gt;  → Business impact analysis&lt;br&gt;  → Model performance comparison&lt;br&gt;  📦 Input: All milestone outputs&lt;br&gt;  📤 Output: Full PDF/MD report&lt;br&gt;&lt;br&gt;Presentation&lt;br&gt;  → Live demo of recommendations&lt;br&gt;  → Feedback loop demonstration&lt;br&gt;  → Team contributions slide&lt;br&gt;  📦 Input: Deployed API&lt;br&gt;  📤 Output: Slides + live demo&lt;br&gt;&lt;br&gt;Future Roadmap&lt;br&gt;  → A/B testing strategy&lt;br&gt;  → Cross-platform integration&lt;br&gt;  → Real-time feedback loop&lt;br&gt;  → Cold start problem solutions&lt;br&gt;&lt;br&gt;README.md&lt;br&gt;  → Project overview and setup&lt;br&gt;  → Team roles and milestones&lt;br&gt;  → How to run the project&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(239, 35, 60);&quot;&gt;🛠️ Tools&lt;/span&gt;&lt;br&gt;Markdown | PowerPoint | GitHub Pages&lt;br&gt;&lt;br&gt;&lt;span style=&quot;color: rgb(239, 35, 60);&quot;&gt;💼 Business Impact&lt;/span&gt;&lt;br&gt;Documents the full project journey&lt;br&gt;Enables future teams to build on this&lt;br&gt;Demonstrates measurable business value&lt;br&gt;&lt;br&gt;📊 Total: 4 files | Status: ⏳ Pending&lt;/font&gt;&lt;/b&gt;" vertex="1">
+          <mxGeometry height="705" width="350" x="1787" y="192" as="geometry" />
+        </mxCell>
+        <mxCell id="21" edge="1" parent="1" source="19" style="edgeStyle=orthogonalEdgeStyle;strokeColor=#ef233c;" target="109">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
